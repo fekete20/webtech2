@@ -1,22 +1,28 @@
+<html>
+<body>
+
 <mat-panel-title class="mat-title"> Regisztráció </mat-panel-title>
 
-    <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form">
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form">
 
-      <mat-form-field >
-        <input matInput type="text" placeholder="Felhasználónév" formControlName="uname" class="input">
-      </mat-form-field>
+  <mat-form-field >
+    <input matInput type="text" placeholder="Felhasználónév" formControlName="uname">
+  </mat-form-field>
 
-      <br>
+  <br>
 
-      <mat-form-field >
-       <input matInput type="password" placeholder="Jelszó" formControlName="password" class="input">
-      </mat-form-field>
+  <mat-form-field >
+    <input matInput type="password" placeholder="Jelszó" formControlName="password">
+  </mat-form-field>
 
-      <p></p>
+  <p></p>
 
-      <button  mat-raised-button type="submit" class="btn">Regisztráció</button>
-      <p></p>
-      <button mat-raised-button routerLinkActive="active" class="submit" routerLink="/login">Bejelentkezés</button>
+  <button  mat-raised-button type="submit" class="btn">Regisztráció</button>
+  <p></p>
+  <button mat-raised-button routerLinkActive="active" class="btn" routerLink="/login">Bejelentkezés</button>
 
-    </form>
+</form>
+
+</body>
+</html>
 

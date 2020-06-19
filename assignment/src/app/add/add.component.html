@@ -1,15 +1,17 @@
-<mat-card class="menucard">
-  <mat-card-content>
-    <h2 class="title">Munkavállaló hozzáadása</h2>
-    <button mat-raised-button routerLinkActive="active" routerLink="/list" class="menubtn">Listázás</button>
-    <button mat-raised-button  routerLinkActive="active" (click)=logout() class="logout">Kijelentkezés</button>
-  </mat-card-content>
-</mat-card>
+<html>
+<body>
 
+  <mat-panel-title class="mat-title"> Műveletek </mat-panel-title>
 
-<mat-card class="card">
-  <h2 class="title">Munkavállaló hozzáadása</h2>
-  <mat-card-content>
+  <p></p>
+
+    <button mat-raised-button routerLinkActive="active" routerLink="/list" class="actbtn" >Listázás</button>
+    <button mat-raised-button routerLinkActive="active" (click)=logout() class="actbtn" >Kijelentkezés</button>
+
+  <p></p>
+
+  <mat-panel-title class="mat-title"> Új munkavállaló hozzáadása </mat-panel-title>
+
     <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form" >
       <mat-form-field >
         <input matInput type="text" placeholder="Név" formControlName="name">
@@ -31,8 +33,10 @@
       </mat-form-field>
       <br>
 
-      <button color="primary" mat-raised-button type="submit"  class="submit" >Hozzáadás</button>
+      <button mat-raised-button type="submit"  class="btn" >Hozzáadás</button>
 
     </form>
-  </mat-card-content>
-</mat-card>
+
+
+</body>
+</html>

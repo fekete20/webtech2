@@ -1,8 +1,8 @@
-import {Component, NgZone, OnInit} from '@angular/core';
-import {User} from '../model/user';
-import {FormBuilder, FormGroup, FormGroupDirective, Validators, NgForm, FormControl} from '@angular/forms';
-import {Router} from '@angular/router';
-import {AppService} from '../app.service';
+import { Component, NgZone, OnInit } from '@angular/core';
+import { User } from '../model/user';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-add',

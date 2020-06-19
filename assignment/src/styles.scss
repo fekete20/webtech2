@@ -1,3 +1,91 @@
+
+@charset "UTF-8";
+/*
+body {
+  font:20px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  color:#fafaff;
+  padding:0;
+  margin:0;
+  background-color:#262626;
+  text-align: center;
+}
+*/
+/*
+.header{
+  padding-top:10px;
+  min-height:70px;
+  border-bottom:red 3px solid;
+  position:sticky;
+  top: 0;
+  overflow: hidden;
+  background-color:#262626;
+}
+*//*
+#table {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  border: red 3px solid;
+  alignment: center;
+  border: none;
+}
+
+.list {
+  margin: auto;
+  width: 37.5%;
+  text-align: center;
+  padding: 12.5px;
+  font-size: 20px;
+  border: red 3px solid;
+
+}
+
+.th {
+  border: none;
+  font-size: 20px;
+  height: 25px;
+}
+
+
+#nav{
+  align-items: center;
+  padding:0 50px;
+  border-bottom:red 3px solid;
+}
+
+#nav a{
+  color:#fff;
+  font-size:15px;
+  text-decoration:none;
+  display: inline-block;
+  padding: 4px 10px;
+  margin-left: 5px;
+}
+
+#nav a:hover{
+  background:rgba(255,0,0,0.5);
+  color:#fff;
+  text-decoration:none;
+  transition: 0.3s;
+}
+
+
+.inputbox {
+  width: 37.5%;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+}
+
+.buttons {
+  margin: 5px;
+  padding: 5px;
+  background: #262626;
+}
+*/
+
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
