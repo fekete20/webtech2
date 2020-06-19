@@ -7,7 +7,7 @@ const express = require('express'),
 const app = express();
 
 mongo.Promise = global.Promise;
-mongo.connect('mongodb://localhost:27017/meandatabase', {         // ÁTÍRNI!!!
+mongo.connect('mongodb://localhost:27017/assignmentDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {

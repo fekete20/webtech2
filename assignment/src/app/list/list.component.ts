@@ -2,50 +2,70 @@ import {Component, NgModule, OnInit} from '@angular/core';
 import { User } from '../model/user';
 import {Data, Router} from '@angular/router';
 import { AppService } from '../app.service';
+import {MaterialModule} from '../material.module';
+/*
+@NgModule( {
+  imports: [
+    MaterialModule
+  ],
+  exports: [
+    MaterialModule
+  ]
+})
+*/
+
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
+ // imports: ['../material.module']
+
 })
+
 
 export class ListComponent implements OnInit {
 
-  Products: any = [];
+
+/* exports: [
+    MaterialModule
+  ];
+*/
+  Employee: any = [];
   user = new User();
   username: string;
 
 
   constructor(private router: Router,
-              private service: AppService)
+              private appService: AppService)
   {
-    this.readProduct();
+    this.getEmployee();
     this.getUser();
   }
 
   ngOnInit(): void {
   }
 
-  readProduct() {
-    this.service.getProducts().subscribe((data) => {
-      this.Products = data;
+  getEmployee() {
+    this.appService.getEmployee().subscribe((data) => {
+      this.Employee = data;
     });
   }
 
   getUser(){
 
-    if (this.service.getLoggedInUser().uname == null)
+    if (this.appService.getLoggedInUser().uname == null)
     {
       this.router.navigate(['/login']);
     }
 
-    this.user = this.service.getLoggedInUser();
+    this.user = this.appService.getLoggedInUser();
     this.username = JSON.stringify(this.user.uname);
   }
 
   logout(){
     this.user = new User();
-    this.service.setLoggedInUser(this.user);
+    this.appService.setLoggedInUser(this.user);
     this.router.navigate(['/login']);
   }
 }

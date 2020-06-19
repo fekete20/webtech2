@@ -3,20 +3,20 @@
     <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form">
 
       <mat-form-field >
-        <input matInput type="text" placeholder="Felhasználónév megadása" formControlName="uname" class="input">
+        <input matInput type="text" placeholder="Felhasználónév" formControlName="uname" class="input">
       </mat-form-field>
 
       <br>
 
       <mat-form-field >
-       <input matInput type="password" placeholder="Jelszó megadása" formControlName="password" class="input">
+       <input matInput type="password" placeholder="Jelszó" formControlName="password" class="input">
       </mat-form-field>
 
       <p></p>
 
       <button  mat-raised-button type="submit" class="btn">Regisztráció</button>
       <p></p>
-      <button mat-raised-button routerLinkActive="active" class="btn" routerLink="/login">Bejelentkezés</button>
+      <button mat-raised-button routerLinkActive="active" class="submit" routerLink="/login">Bejelentkezés</button>
 
     </form>
 
