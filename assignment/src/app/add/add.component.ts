@@ -38,8 +38,8 @@ export class AddComponent implements OnInit {
   mainForm() {
     this.createForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
-      position: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
-      office: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      position: ['', [Validators.required]],
+      office: ['', [Validators.required]],
       salary: ['', [Validators.required, Validators.pattern('^-?(0|[1-9]\\d*)?$')]]
     });
   }
